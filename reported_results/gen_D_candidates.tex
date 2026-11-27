@@ -1,0 +1,14 @@
+W255 & C & \url{https://github.com/Alessiobrini/Deep-Reinforcement-Trading-with-Predictable-Returns} & none stated & CHOSEN & RL, implicit size (shares traded); known optimal benchmark (Garleanu-Pedersen) lets us separate signal from size; zero data risk; smoke passed\\
+W462 & C & \url{https://github.com/JingyiGu/Margin-Trader} & MIT & CHOSEN (covers C065 too) & RL, share-quantity action with 2x margin; same repo as C065 (ICAIF 2023) and the TKDE 2026 extension; leverage-driven returns are the textbook case for an exposure-matched fixed rule\\
+C065 & C & \url{https://github.com/JingyiGu/Margin-Trader} & MIT & CHOSEN (merged with W462) & same code; replicated once, reported for both papers\\
+C034 & C & \url{https://github.com/Ivsxk/RAT} & none stated & CHOSEN & RL (direct policy gradient), explicit weights with a learned leverage head; paper's own ablation RAT vs RAT-B is a size ablation; huge reported APV is the claim most worth testing\\
+W001 & A & \url{https://github.com/bkmulusew/ml_fx_trading} & README badge MIT; no LICENSE file & CHOSEN (non-RL) & predict-then-size with Kelly; paper's fixed baseline is USD 10k vs Kelly f\_bar \textasciitilde{}0.07-0.09 of USD 1 M, so the reported Kelly gain may be exposure, not timing\\
+C114 & C & \url{https://github.com/AI4Finance-Foundation/Deep-Reinforcement-Learning-for-Automated-Stock-Trading-Ensemble-Strategy-ICAIF-2020 (404); mirror github.com/kvdsouza/... cloned} & MIT & RESERVE & most-cited branch-C paper, but official code removed and TF1/\allowbreak{}MPI stack; Margin Trader already covers the FinRL share-quantity mechanism\\
+W050 & A & \url{https://github.com/KgPergher98/OHRP} & none stated & RESERVE (non-RL \#2) & cheap risk-parity case, but sizing is allocation without a cash/\allowbreak{}leverage leg and EW is already reported, so little new information\\
+W276 & C & \url{https://github.com/dynamic-trading-RL/dynamic-trading} & none stated & RESERVE & same Garleanu-Pedersen design as W255, adds little once W255 is in\\
+C070 & D & \url{https://github.com/NJIT-Fintech-Lab/Adaptive-and-Explainable-Margin-Trading-via-LLM-and-RL} & none stated & EXCLUDED & needs API credentials; the fixed-ratio comparator is already the Margin Trader replication\\
+W025 & A & \url{https://github.com/janka-moeller/Sig-SPT} & none stated & EXCLUDED & real-data results need CRSP; data rule (skip hard-to-get data)\\
+C016 & C & \url{https://github.com/qinmoelei/FineFT_code_space} & none stated & EXCLUDED & commercial data\\
+W040 & A & \url{https://doi.org/10.5281/zenodo.21229462} & CC-BY-4.0 & EXCLUDED & sizing not separable per coding; archive not inspected\\
+W327 & C & \url{https://codeocean.com/capsule/0769244/tree/v1} & not checked & EXCLUDED (for now) & code only on Code Ocean, not cloned; could replace C034 if needed\\
+W373 & B & \url{https://github.com/kardevroop/bandit-stock-trading} & - & EXCLUDED & repo not public and data subscription-only\\

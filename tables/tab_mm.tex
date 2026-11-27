@@ -1,0 +1,22 @@
+\begin{table}[t]
+\caption{Money-management decisions, their classical rules and their learned counterparts. $n$: studies by primary
+sized object and by branch (A/B/C/D); in 3 further studies (0/1/2/0) the unit of the size is not stated. Scale-in steps are not coded.}
+\label{tab:mm}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.75cm} >{\raggedright\arraybackslash}p{3.75cm} >{\raggedright\arraybackslash}p{4.85cm} r l@{}}
+\toprule
+Decision & Classical rules & Learned counterpart (branch) & $n$ & A/B/C/D\\
+\midrule
+Size of one position (quantity, fraction) & fixed amount; fixed fraction; fixed risk $f=\ell/d$; Kelly,
+fractional Kelly & forecasts feed the Kelly rule (A); a network outputs the fraction (B); RL action (C) & 51 & 11/7/33/0\\
+Total exposure (leverage, cash or short leg) & constant leverage; volatility targeting; drawdown control & a forecast
+scales the exposure (A); network (B); RL action (C); language model (D) & 24 & 7/5/11/1\\
+Risk shares across assets (risk budget) & risk parity; risk budgeting; hierarchical risk parity & forecasts or
+clusters feed the rule (A); network (B); language model (D) & 11 & 7/3/0/1\\
+Exit (stop-loss, take-profit level) & fixed stop; trailing stop; profit target & a classifier selects the level
+(A); network (B); RL action (C) & 6 & 1/1/4/0\\
+Scale-in, scale-out steps & pyramiding; partial exits & successive RL actions build the holding (C) & -- & --\\
+\bottomrule
+\end{tabular}
+\end{table}
